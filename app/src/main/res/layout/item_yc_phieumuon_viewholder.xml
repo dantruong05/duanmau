@@ -1,0 +1,61 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_ten_ngm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tên người mượn"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tentp"/>
+
+    <TextView
+        android:id="@+id/tv_tentp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tên sách"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ten_ngm"/>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tentp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp">
+
+
+        <Button
+            android:id="@+id/btnChiTiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiết"
+            android:layout_marginEnd="8dp"/>
+        <Button
+            android:id="@+id/btnTuChoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Từ chối"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnChapNhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chấp nhận"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
