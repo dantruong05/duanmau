@@ -3,14 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="500dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-
-
+        <!-- Tên người mượn -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:text="Tên người mượn"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
         <EditText
             android:id="@+id/ten_ngm"
             android:layout_width="match_parent"
@@ -18,9 +27,10 @@
             android:layout_marginBottom="4dp"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            android:layout_marginTop="16dp"
-            android:hint="ten nguoi muon"
-            />
+            android:layout_marginTop="4dp"
+            android:hint="Tên người mượn"/>
+
+        <!-- ID tác phẩm (ẩn) -->
         <EditText
             android:id="@+id/id_tacpham"
             android:layout_width="match_parent"
@@ -29,9 +39,19 @@
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginTop="16dp"
-            android:hint="id"
-            android:visibility="gone"
-            />
+            android:hint="ID"
+            android:visibility="gone"/>
+
+        <!-- Tên tác phẩm -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:text="Tên tác phẩm"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
         <EditText
             android:id="@+id/ten_tp"
             android:layout_width="match_parent"
@@ -40,9 +60,18 @@
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginTop="4dp"
-            android:hint="ten tac pham"
-            />
+            android:hint="Tên tác phẩm"/>
 
+        <!-- Số điện thoại -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:text="Số điện thoại"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
         <EditText
             android:id="@+id/sdt"
             android:layout_width="match_parent"
@@ -52,12 +81,9 @@
             android:layout_marginRight="4dp"
             android:layout_marginTop="4dp"
             android:fontFamily="sans-serif"
-            android:hint="nhap so dien thoai"
-            />
+            android:hint="Nhập số điện thoại"/>
 
-
-
-
+        <!-- Ngày mượn -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +93,7 @@
                 android:id="@+id/bt_ngaymuon"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:text="Ngày mượn" />
+                android:text="Ngày mượn"/>
             <TextView
                 android:id="@+id/tv_ngaymuon"
                 android:layout_width="0dp"
@@ -75,22 +101,20 @@
                 android:layout_weight="1"
                 android:text="##/##/###"
                 android:textSize="18sp"
-                android:padding="16dp" />
+                android:padding="16dp"/>
         </LinearLayout>
 
-
+        <!-- Ngày trả -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginLeft="5dp">
-
             <Button
                 android:id="@+id/bt_ngaytra"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:text="Ngày trả" />
-
+                android:text="Ngày trả"/>
             <TextView
                 android:id="@+id/tv_ngaytra"
                 android:layout_width="0dp"
@@ -98,7 +122,7 @@
                 android:layout_weight="1"
                 android:text="##/##/###"
                 android:textSize="18sp"
-                android:padding="16dp" />
+                android:padding="16dp"/>
         </LinearLayout>
 
     </LinearLayout>

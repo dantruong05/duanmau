@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ import java.util.Locale;
 
 import DAO.PhieuMuonDAO;
 import Model.PhieuMuon;
+import ds_sanpham.SanPhamAdapterFragment;
 
 public class PhieuMuonFragment extends Fragment {
     RecyclerView rcv;
@@ -47,6 +49,7 @@ public class PhieuMuonFragment extends Fragment {
     TextView tv_ngaymuon,tv_ngaytra;
     EditText et_tentp,et_tenngm,et_sdt,et_masp;
     CheckBox cb_trangthai;
+    ImageView img;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -58,6 +61,7 @@ public class PhieuMuonFragment extends Fragment {
         View v = inlflater.inflate(R.layout.fragment_phieumuon, container, false);
         rcv = v.findViewById(R.id.rcv);
         fabutton = v.findViewById(R.id.floatactionbutton);
+        img=v.findViewById(R.id.img_pm);
         fabutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -219,10 +223,17 @@ public class PhieuMuonFragment extends Fragment {
     public void dulieu()
     {
         dspm = pmd.xemPM();
-        PhieuMuonAdapter adapter =new PhieuMuonAdapter(getContext(),dspm,this);
-        LinearLayoutManager linear = new LinearLayoutManager(getContext());
-        rcv.setLayoutManager(linear);
-        rcv.setAdapter(adapter);
+        if (dspm.isEmpty()) {
+            img.setVisibility(View.VISIBLE);
+            rcv.setVisibility(View.GONE);
+        } else {
+            img.setVisibility(View.GONE);
+            rcv.setVisibility(View.VISIBLE);
+            PhieuMuonAdapter adapter =new PhieuMuonAdapter(getContext(),dspm,this);
+            LinearLayoutManager linear = new LinearLayoutManager(getContext());
+            rcv.setLayoutManager(linear);
+            rcv.setAdapter(adapter);
+        }
     }
 
 

@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(id==R.id.et_yeucaupm){
                     f=new YeuCauFragment();
+                    getSupportActionBar().setTitle("Yêu cầu phiếu mượn");
                 }
 
                 FragmentManager fagment=getSupportFragmentManager();

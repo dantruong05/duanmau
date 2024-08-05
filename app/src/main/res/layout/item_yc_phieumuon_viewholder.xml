@@ -4,27 +4,67 @@
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tv_ten_ngm"
+    <!-- Container for Tên người mượn -->
+    <LinearLayout
+        android:id="@+id/container_ten_ngm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Tên người mượn"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tv_tentp"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_tentp"
+        <!-- Label for Tên người mượn -->
+        <TextView
+            android:id="@+id/label_ten_ngm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên người mượn:"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Tên người mượn -->
+        <TextView
+            android:id="@+id/tv_ten_ngm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tên người mượn"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Container for Tên tác phẩm -->
+    <LinearLayout
+        android:id="@+id/container_ten_tp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Tên sách"
-        android:textSize="16sp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ten_ngm"/>
+        app:layout_constraintTop_toBottomOf="@+id/container_ten_ngm">
+
+        <!-- Label for Tên tác phẩm -->
+        <TextView
+            android:id="@+id/label_tentp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên tác phẩm:"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Tên tác phẩm -->
+        <TextView
+            android:id="@+id/tv_tentp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tên sách"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/button_layout"
@@ -32,10 +72,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tentp"
+        app:layout_constraintTop_toBottomOf="@+id/container_ten_tp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="8dp">
-
 
         <Button
             android:id="@+id/btnChiTiet"
@@ -54,8 +93,7 @@
             android:id="@+id/btnChapNhan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chấp nhận"
-            />
+            android:text="Chấp nhận"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

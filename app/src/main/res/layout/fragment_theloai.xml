@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     android:padding="16dp">
 
     <EditText
@@ -10,14 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nhập tên thể loại" />
-
     <Button
         android:id="@+id/bt_themtl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Thêm thể loại"
         android:layout_marginTop="8dp" />
-
+    <ImageView
+        android:id="@+id/img_tl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/theloai"
+        android:visibility="visible" />
     <ListView
         android:id="@+id/dstheloai"
         android:layout_width="match_parent"

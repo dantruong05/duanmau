@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class TheLoaiFragment extends Fragment {
    ArrayAdapter<String> tacphamdapter;
    List<String> dstl;
    List<String> dstp;
+   ImageView img;
 
     @Nullable
     @Override
@@ -48,6 +50,7 @@ public class TheLoaiFragment extends Fragment {
         bt_themtl = view.findViewById(R.id.bt_themtl);
         ds_theloai = view.findViewById(R.id.dstheloai);
         ds_tacpham = view.findViewById(R.id.dstacpham);
+        img=view.findViewById(R.id.img_tl);
         helper = new myhelper(getContext());
 
         dstl = new ArrayList<>();
@@ -77,11 +80,17 @@ public class TheLoaiFragment extends Fragment {
     //làm mới và cập nhật ds lên gd người dùng
     private void loadTL() {
         //xóa cũ
+
         dstl.clear();
         //gọi
         dstl.addAll(helper.getAllTheLoai());
         //thêm mới
         theloaiAdapter.notifyDataSetChanged();
+        if (dstl.isEmpty()) {
+            img.setVisibility(View.VISIBLE);
+        } else {
+            img.setVisibility(View.GONE);
+        }
     }
 
     //thêm một thể loại mới vào cơ sở dữ liệu và cập nhật danh sách thể loại hiển thị trong giao diện người dùng
