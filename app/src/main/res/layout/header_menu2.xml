@@ -7,11 +7,16 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
     android:gravity="bottom">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_user"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="41dp"
+        android:layout_height="39dp"
         android:text="User"
+        android:layout_marginLeft="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textSize="25dp" />

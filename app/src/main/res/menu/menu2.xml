@@ -3,15 +3,18 @@
     <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/et_sach"
-                    android:title="Sách" />
+                    android:title="Sách"
+                    android:icon="@drawable/ic_book"/>
                 <item
                     android:id="@+id/et_sachmuon"
-                    android:title="Sách mượn" />
-        <item android:title="khac">
+                    android:title="Sách mượn"
+                    android:icon="@drawable/ic_sachmuon"/>
+        <item android:title="khác">
             <menu>
                 <item
                     android:id="@+id/et_dandgxuat"
-                    android:title="Đăng xuất" />
+                    android:title="Đăng xuất"
+                    android:icon="@drawable/ic_dangxuat"/>
             </menu>
         </item>
     </group>
